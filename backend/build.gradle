@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.5' // aktuelle Version verwenden
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.haw'
+version = '0.0.1-SNAPSHOT'
+
+// repositories {
+//     mavenCentral()
+// }
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.postgresql:postgresql:42.7.3'
+//    implementation 'com.google.cloud.sql:postgres-socket-factory:1.1.0'
+//    runtimeOnly 'com.h2database:h2:2.3.232'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+springBoot {
+    mainClass = 'com.haw.klausase.App'
+}
